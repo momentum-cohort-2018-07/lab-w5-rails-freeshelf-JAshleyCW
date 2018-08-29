@@ -16,29 +16,25 @@
     </div>
 <% end %>
 
-<p>
-    <%= form.label :title %><br>
-    <%= form.text_field :title %>
-  </p>
+<form>
+    <div class="form-group">
+        <label for="input_title">Title</label>
+        <input type="text" class="form-control" id="form_input" placeholder="enter title">
+    </div>
+    <div class="form-group">
+        <label for="input_author">Author</label>
+        <input type="text" class="form-control" id="form_input" placeholder="enter author">
+    </div>
+    <div class="form-group">
+        <label for="input_genre">Genre</label>
+        <input type="text" class="form-control" id="form_input" placeholder="enter genre">
+    </div>
+    <div class="form-group">
+        <label for="input_url">URL</label>
+        <input type="text" class="form-control" id="form_input" placeholder="enter url">
+    </div>
 
-  <p>
-    <%= form.label :author %><br>
-    <%= form.text_field :author %>
-  </p>
-
-  <p>
-    <%= form.label :genre %><br>
-    <%= form.text_field :genre %>
-  </p>
-
-  <p>
-    <%= form.label :url %><br>
-    <%= form.text_field :url %>
-  </p>
-    
-  <p>
-    <%= form.submit %>
-  </p>
+</form>
 
 <% end %>
 
