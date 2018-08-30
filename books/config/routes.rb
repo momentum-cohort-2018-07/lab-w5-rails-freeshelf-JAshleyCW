@@ -1,13 +1,19 @@
 Rails.application.routes.draw do
   
   get 'welcome/index'
-  root 'welcome#index'
+  
 
   get 'books/index'
-
   resources :books
 
-  root 'books#index'
+  get 'users/index'
+  resources :users
+ 
+
+  resource :session, only: [:new, :create, :destroy]
+  
+  root 'welcome#index'
+  
   
   # get 'books/show'
   # get 'books/new'

@@ -1,0 +1,17 @@
+<h2>Log In</h2>
+
+<% if flash[:notice] %>
+<p class="alert alert-success"></p><%= flash[:notice] %></p>
+<% end %>
+
+<% if flash[:error_message] %>
+<p class="alert alert-danger"></p><%= flash[:error_message] %></p>
+<% end %>
+
+<%= form_with(url: session_path) do %>
+    <%= label_tag :email %>
+    <%= text_field_tag :email %>
+    <%= label_tag :password %>
+    <%= password_field_tag :password %>
+    <%= submit_tag "Log In" %>
+<% end %>

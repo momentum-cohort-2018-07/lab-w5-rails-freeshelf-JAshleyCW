@@ -9,10 +9,17 @@
 
 10.times do
     Book.create!(
-      title: Faker::Book.title, 
-      author: Faker::Book.author, 
-      description: Faker::Lorem.paragraph(6),
-      genre: Faker::Book.genre, 
-      user: Faker::Internet.username, 
-      url: Faker::Internet.url('example.com', '/foobar.html'))
+        title: Faker::Book.title, 
+        author: Faker::Book.author, 
+        description: Faker::Lorem.paragraph(6),
+        genre: Faker::Book.genre, 
+        url: Faker::Internet.url('example.com', '/foobar.html')
+        )
   end
+
+10.times do
+    User.create!(
+        email: Faker::Internet.email,
+        password: Faker::Internet.password
+        )
+    end
